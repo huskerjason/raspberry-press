@@ -21,8 +21,8 @@ sudo find /var/www/ -type f -exec chmod 664 {} +
 sudo find /var/www/ -type d -exec chmod 775 {} +
 sudo chown -R www-data: /var/www/
 
-db=$(grep 'table_prefix' /var/www/wp-config.php | cut -f2 -d"'")
-prefix=$(grep 'DB_NAME' /var/www/wp-config.php |cut -f4 -d"'")
+prefix=$(grep 'table_prefix' /var/www/wp-config.php | cut -f2 -d"'")
+db=$(grep 'DB_NAME' /var/www/wp-config.php |cut -f4 -d"'")
 sudo mariadb -e "UPDATE $db."$prefix"options SET option_value = '$(hostname -I)' WHERE option_name = 'blogdescription';"
 
 cd $DIR_CURRENT
