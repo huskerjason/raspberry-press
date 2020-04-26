@@ -25,7 +25,7 @@
 		sudo find /var/www/ -type f -exec chmod 664 {} +
 		sudo find /var/www/ -type d -exec chmod 775 {} +
 		sudo chown -R www-data: /var/www/
-		sudo mariadb -e "UPDATE WP_DATABASE_NAME."$WP_PREFIX"options SET option_value = '$(hostname -I)' WHERE option_name = 'blogdescription';"
+		sudo mariadb -e "UPDATE $WP_DATABASE_NAME."$WP_PREFIX"options SET option_value = '$(hostname -I)' WHERE option_name = 'blogdescription';"
 
 	}
 
