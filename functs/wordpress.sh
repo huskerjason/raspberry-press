@@ -38,7 +38,16 @@
 		sudo sed -i "s|define( 'DB_NAME', 'database_name_here' );|define( 'DB_NAME', '$WP_DATABASE_NAME' );|" /var/www/wp-config.php
 		sudo sed -i "s|define( 'DB_USER', 'username_here' );|define( 'DB_USER', '$WP_DATABASE_USERNAME' );|" /var/www/wp-config.php
 		sudo sed -i "s|define( 'DB_PASSWORD', 'password_here' );|define( 'DB_PASSWORD', '$WP_DATABASE_PASSWORD' );|" /var/www/wp-config.php
+		sudo sed -i "s|define( 'AUTH_KEY',         'put your unique phrase here' );|define( 'AUTH_KEY',         '$(pwgen -s 64 1)' );|" /var/www/wp-config.php
+		sudo sed -i "s|define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );|define( 'SECURE_AUTH_KEY',  '$(pwgen -s 64 1)' );|" /var/www/wp-config.php
+		sudo sed -i "s|define( 'LOGGED_IN_KEY',    'put your unique phrase here' );|define( 'LOGGED_IN_KEY',    '$(pwgen -s 64 1)' );|" /var/www/wp-config.php
+		sudo sed -i "s|define( 'NONCE_KEY',        'put your unique phrase here' );|define( 'NONCE_KEY',        '$(pwgen -s 64 1)' );|" /var/www/wp-config.php
+		sudo sed -i "s|define( 'AUTH_SALT',        'put your unique phrase here' );|define( 'AUTH_SALT',        '$(pwgen -s 64 1)' );|" /var/www/wp-config.php
+		sudo sed -i "s|define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );|define( 'SECURE_AUTH_SALT', '$(pwgen -s 64 1)' );|" /var/www/wp-config.php
+		sudo sed -i "s|define( 'LOGGED_IN_SALT',   'put your unique phrase here' );|define( 'LOGGED_IN_SALT',   '$(pwgen -s 64 1)' );|" /var/www/wp-config.php
+		sudo sed -i "s|define( 'NONCE_SALT',       'put your unique phrase here' );|define( 'NONCE_SALT',       '$(pwgen -s 64 1)' );|" /var/www/wp-config.php
 		sudo sed -i "s|\$table_prefix = 'wp_';|\$table_prefix = '$WP_PREFIX';|" /var/www/wp-config.php
+
 		if [[ $WP_DEBUG == 1 ]]; then
 			sudo sed -i "s|define( 'WP_DEBUG', false );|define( 'WP_DEBUG', true );|" /var/www/wp-config.php
 		fi
