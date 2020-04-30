@@ -61,39 +61,48 @@
 		fi
 
 		if [[ " ${WP_THEMES[@]} " =~ "Twenty Sixteen" ]]; then
-			sudo unzip files/twentysixteen.2.1.zip -d /var/www/html/wp-content/themes/ > /dev/null
+			wget 'https://downloads.wordpress.org/theme/twentysixteen.2.1.zip'
+			sudo unzip twentysixteen.2.1.zip -d /var/www/html/wp-content/themes/ > /dev/null
 		fi
 
 		if [[ " ${WP_THEMES[@]} " =~ "Twenty Fifteen" ]]; then
-			sudo unzip files/twentyfifteen.2.6.zip -d /var/www/html/wp-content/themes/ > /dev/null
+			wget 'https://downloads.wordpress.org/theme/twentyfifteen.2.6.zip'
+			sudo unzip twentyfifteen.2.6.zip -d /var/www/html/wp-content/themes/ > /dev/null
 		fi
 
 		if [[ " ${WP_THEMES[@]} " =~ "Twenty Fourteen" ]]; then
-			sudo unzip files/twentyfourteen.2.8.zip -d /var/www/html/wp-content/themes/ > /dev/null
+			wget 'https://downloads.wordpress.org/theme/twentyfourteen.2.8.zip'
+			sudo unzip twentyfourteen.2.8.zip -d /var/www/html/wp-content/themes/ > /dev/null
 		fi
 
 		if [[ " ${WP_THEMES[@]} " =~ "Twenty Thirteen" ]]; then
-			sudo unzip files/twentythirteen.3.0.zip -d /var/www/html/wp-content/themes/ > /dev/null
+			wget 'https://downloads.wordpress.org/theme/twentythirteen.3.0.zip'
+			sudo unzip twentythirteen.3.0.zip -d /var/www/html/wp-content/themes/ > /dev/null
 		fi
 
 		if [[ " ${WP_THEMES[@]} " =~ "Twenty Twelve" ]]; then
-			sudo unzip files/twentytwelve.3.1.zip -d /var/www/html/wp-content/themes/ > /dev/null
+			wget 'https://downloads.wordpress.org/theme/twentytwelve.3.1.zip'
+			sudo unzip twentytwelve.3.1.zip -d /var/www/html/wp-content/themes/ > /dev/null
 		fi
 
 		if [[ " ${WP_THEMES[@]} " =~ "Twenty Eleven" ]]; then
-			sudo unzip files/twentyeleven.3.4.zip -d /var/www/html/wp-content/themes/ > /dev/null
+			wget 'https://downloads.wordpress.org/theme/twentyeleven.3.4.zip'
+			sudo unzip twentyeleven.3.4.zip -d /var/www/html/wp-content/themes/ > /dev/null
 		fi
 
 		if [[ " ${WP_THEMES[@]} " =~ "Twenty Ten" ]]; then
-			sudo unzip files/twentyten.3.0.zip -d /var/www/html/wp-content/themes/ > /dev/null
+			wget 'https://downloads.wordpress.org/theme/twentyten.3.0.zip'
+			sudo unzip twentyten.3.0.zip -d /var/www/html/wp-content/themes/ > /dev/null
 		fi
 
 		if [[ " ${WP_THEMES[@]} " =~ "Kubrick" ]]; then
-			sudo unzip files/default.1.7.2.zip -d /var/www/html/wp-content/themes/ > /dev/null
+			wget 'https://downloads.wordpress.org/theme/default.1.7.2.zip'
+			sudo unzip default.1.7.2.zip -d /var/www/html/wp-content/themes/ > /dev/null
 		fi
 
 		theme_dir=$(ls /var/www/html/wp-content/themes | grep -E -- 'default|twenty')
 		if [[ ! " ${WP_THEMES[@]} " =~ "Twenty Twenty" &&  $theme_dir != "twentytwenty" ]]; then
+			wget 'https://downloads.wordpress.org/theme/'
 			sudo rm -R /var/www/html/wp-content/themes/twentytwenty
 		fi
 
