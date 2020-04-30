@@ -24,7 +24,7 @@
 		whiptail --title 'Progress' --infobox "$text" 18 76 --backtitle 'Famous 10 Minute Install'
 
 
-		sudo tar xzf files/wordpress-5.4.tar.gz > /dev/null
+		sudo tar xzf files/wordpress-5.4.1.tar.gz > /dev/null
 		sudo rm -rf /var/www/html/*
 		sudo mv wordpress/* /var/www/html/
 		sudo rm -r wordpress
