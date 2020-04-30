@@ -29,7 +29,7 @@
 		#	Get the wp database name, it can be left empty. Test if not.
 		test=x
 		until [[ $test == '' ]]; do
-			body="\nPlease enter the name of the WordPress database. Database name can only contain lowercase letters, numbers, and underscores.nnIf you don't enter a name, one will be randomly generated."
+			body="\nPlease enter the name of the WordPress database. Database name can only contain lowercase letters, numbers, and underscores.\n\nIf you don't enter a name, one will be randomly generated."
 			WP_DATABASE_NAME=$(whiptail --backtitle 'Famous 10 Minute Install' --title 'Database' --inputbox "$body" 18 76 --nocancel 3>&1 1>&2 2>&3)
 			test=$(echo $WP_DATABASE_NAME | sed 's|[a-z0-9_]||g')
 		done
@@ -38,7 +38,7 @@
 		#	Get the prefix and check it or generate one
 		test=x
 		until [[ $test == '' ]]; do
-			body="\nA simple method to protect your database is to change the table prefix WordPress uses. The default is 'wp_'. The prefix  can only contain lowercase letters, numbers, and underscores. A typical prefix is a few letters and an underscore.nnIf one is not provided, a random one will be generated."
+			body="\nA simple method to protect your database is to change the table prefix WordPress uses. The default is 'wp_'. The prefix  can only contain lowercase letters, numbers, and underscores. A typical prefix is a few letters and an underscore.\n\nIf one is not provided, a random one will be generated."
 			WP_PREFIX=$(whiptail --backtitle 'Famous 10 Minute Install' --title 'Table Prefix' --inputbox "$body" 18 76 --nocancel 3>&1 1>&2 2>&3)
 			test=$(echo $WP_PREFIX | sed 's|[a-z0-9_]||g')
 		done
