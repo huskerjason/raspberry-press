@@ -18,7 +18,7 @@
 		##
 		#######################################################################
 
-		text="Installing the LAMP stack; Apache, MariaDb, and PHP. WordPress will work with just these packages but it like php-bcmath php-imagick php-mysql php-xml php-mbstring php-zip php-curl to be installed too.\n\nApache gets configured for WordPress' pretty permalinks. MariaDB is cleaned up.\n\nPwgen is installed and used for phpMyAdmin for the internal user/password and cookie security. It's also used to generate the values you didn't define."
+		text="Installing the LAMP stack; Apache, MariaDb, and PHP. WordPress will work with just these packages but it like php-bcmath php-imagick php-mysql php-xml php-mbstring php-zip php-curl to be installed too.\n\nApache gets configured for WordPress' pretty permalinks. MariaDB is cleaned up.\n\nPwgen is installed. It's used for phpMyAdmin for the internal user/password and cookie security, and for the secret keys in the WP config file. It's also used to generate the values you didn't define."
 		whiptail --title 'Progress' --infobox "$text" 18 76 --backtitle 'Famous 10 Minute Install'
 
 		sudo DEBIAN_FRONTEND=noninteractive apt-get install apache2 mariadb-server php php-bcmath php-imagick php-mysql php-xml php-mbstring php-zip php-curl pwgen -y < /dev/null > /dev/null
