@@ -11,7 +11,8 @@ git clone https://github.com/huskerjason/raspberry-press.git
 ~~~
 and execute it
 ~~~bash
-bash raspberry-press/install.sh
+cd raspberry-press
+bash install.sh
 ~~~
 The script will pause near the end. You should open your browser and type in the IP address. This is the final step to configure WP. It's only a few questions, very quick. Once it says you can sign in, come back and finish the script.
 #
