@@ -102,6 +102,10 @@ function get_wordpress {
 
 	if [[ ! " ${WP_THEMES[@]} " =~ "Twenty Twenty" ]]; then
 		sudo rm -R /var/www/html/wp-content/themes/twentytwenty
+	else	
+		# the wp install has been updated for the updated 2020 theme, this fixes that
+		sudo rm -R /var/www/html/wp-content/themes/twentytwenty
+		sudo unzip files/twentytwenty.1.3.zip -d /var/www/html/wp-content/themes/ > /dev/null
 	fi
 
 	if [[ ! " ${WP_THEMES[@]} " =~ "Twenty Nineteen" ]]; then
@@ -144,10 +148,6 @@ function get_wordpress {
 		sudo unzip files/default.1.7.2.zip -d /var/www/html/wp-content/themes/ > /dev/null
 	fi
 
-	# theme_dir=$(ls /var/www/html/wp-content/themes | grep -E -- 'default|twenty')
-	# if [[ ! " ${WP_THEMES[@]} " =~ "Twenty Twenty" &&  $theme_dir != "twentytwenty" ]]; then
-		# sudo rm -R /var/www/html/wp-content/themes/twentytwenty
-	# fi
 
 }
 
