@@ -91,7 +91,7 @@ function get_values {
 
 
 		#  Turn wp debug on or off
-		whiptail --backtitle 'Famous 10 Minute Install' --title 'Debug' --yes-button 'Off' --no-button 'On' --yesno "\nWould you like debug turned on for WordPress?\n\nNot sure, answer no." 18 76
+		whiptail --backtitle 'Famous 10 Minute Install' --title 'Debug' --yes-button 'Off' --no-button 'On' --yesno "\nWould you like debug turned on for WordPress?\n\nNot sure, choose off." 18 76
 		WP_DEBUG=$?
 
 	fi
