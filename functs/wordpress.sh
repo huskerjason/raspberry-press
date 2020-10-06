@@ -106,7 +106,7 @@ function get_wordpress {
 	else	
 		# the wp install has been updated for the updated 2020 theme, this fixes that
 		sudo rm -R /var/www/html/wp-content/themes/twentytwenty
-		sudo unzip files/twentytwenty.1.3.zip -d /var/www/html/wp-content/themes/ > /dev/null
+		sudo unzip files/twentytwenty.1.5.zip -d /var/www/html/wp-content/themes/ > /dev/null
 	fi
 
 	if [[ ! " ${WP_THEMES[@]} " =~ "Twenty Nineteen" ]]; then
