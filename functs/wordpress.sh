@@ -71,7 +71,8 @@ function get_wordpress {
 	sudo mariadb -e "FLUSH PRIVILEGES;"
 
 
-	sudo tar xzf files/wordpress-5.4.1.tar.gz > /dev/null
+	sudo tar xzf files/wordpress-5.5.1.tar.gz > /dev/null
+
 	sudo rm -rf /var/www/html/*
 	sudo mv wordpress/* /var/www/html/
 	sudo rm -r wordpress
