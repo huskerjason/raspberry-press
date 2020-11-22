@@ -26,7 +26,7 @@
 
 
 		PMA_CONTROL_USER=$(pwgen -0 -A -1 8)
-		PMA_CONTROL_PASSWORD=$(pwgen -s -1 -c -n 12)
+		PMA_CONTROL_PASSWORD=$(pwgen -s -1 -c -n 16)
 
 
 		tar xzf files/phpMyAdmin-5.0.2-english.tar.gz > /dev/null
