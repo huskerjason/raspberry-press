@@ -101,4 +101,56 @@ function get_wordpress {
 	sudo sed -i "s|define( 'WP_DEBUG', false );|define( 'WP_DEBUG', $WP_DEBUG );|" /var/www/wp-config.php
 
 
+	sudo rm -r /var/www/html/wp-content/themes/*
+
+	if [[ " ${WP_THEMES[@]} " =~ "Twenty Twenty One" ]]; then
+		sudo unzip files/twentytwentyone.1.1.zip -d /var/www/html/wp-content/themes/ > /dev/null
+	fi
+
+	if [[ " ${WP_THEMES[@]} " =~ "Twenty Twenty" ]]; then
+		sudo unzip files/twentytwenty.1.6.zip -d /var/www/html/wp-content/themes/ > /dev/null
+	fi
+
+	if [[ " ${WP_THEMES[@]} " =~ "Twenty Nineteen" ]]; then
+		sudo unzip files/twentynineteen.1.9.zip -d /var/www/html/wp-content/themes/ > /dev/null
+	fi
+
+	if [[ " ${WP_THEMES[@]} " =~ "Twenty Seventeen" ]]; then
+		sudo unzip files/twentyseventeen.2.5.zip -d /var/www/html/wp-content/themes/ > /dev/null
+	fi
+
+
+
+
+	if [[ " ${WP_THEMES[@]} " =~ "Twenty Sixteen" ]]; then
+		sudo unzip files/twentysixteen.2.3.zip -d /var/www/html/wp-content/themes/ > /dev/null
+	fi
+
+	if [[ " ${WP_THEMES[@]} " =~ "Twenty Fifteen" ]]; then
+		sudo unzip files/twentyfifteen.2.8.zip -d /var/www/html/wp-content/themes/ > /dev/null
+	fi
+
+	if [[ " ${WP_THEMES[@]} " =~ "Twenty Fourteen" ]]; then
+		sudo unzip files/twentyfourteen.3.0.zip -d /var/www/html/wp-content/themes/ > /dev/null
+	fi
+
+	if [[ " ${WP_THEMES[@]} " =~ "Twenty Thirteen" ]]; then
+		sudo unzip files/twentythirteen.3.2.zip -d /var/www/html/wp-content/themes/ > /dev/null
+	fi
+
+	if [[ " ${WP_THEMES[@]} " =~ "Twenty Twelve" ]]; then
+		sudo unzip files/twentytwelve.3.3.zip -d /var/www/html/wp-content/themes/ > /dev/null
+	fi
+
+	if [[ " ${WP_THEMES[@]} " =~ "Twenty Eleven" ]]; then
+		sudo unzip files/twentyeleven.3.6.zip -d /var/www/html/wp-content/themes/ > /dev/null
+	fi
+
+	if [[ " ${WP_THEMES[@]} " =~ "Twenty Ten" ]]; then
+		sudo unzip files/twentyten.3.2.zip -d /var/www/html/wp-content/themes/ > /dev/null
+	fi
+
+
+
+
 }
