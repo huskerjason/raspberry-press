@@ -29,7 +29,7 @@ cd $DIR_SOURCE
 . functs/update.sh
 . functs/lamp.sh
 . functs/phpmyadmin-5.0.4.sh
-. functs/wordpress-5.5.3.sh
+. functs/wordpress-5.6.sh
 . functs/wp-permissions.sh
 . functs/display-stuff.sh
 . functs/config-wait.sh
