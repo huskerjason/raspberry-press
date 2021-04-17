@@ -1,7 +1,7 @@
 # The Famous 10 Minute Raspberry Pi WordPress Installation
 WordPress touts their 5 Minute Install. This is the Raspberry Pi version of that. This script will take a freshly minted SD card to fully functional WordPress site in under 10 minutes. This is the easiest and fast install around. Try it and see.
 #
-The quickest and easiest whay to get the script is to download the zip file, unzip it, then run the script.
+The quickest and easiest way to get the script is to download the zip file, unzip it, then run the script.
 ~~~bash
 wget https://github.com/huskerjason/raspberry-press/archive/master.zip
 unzip master.zip
