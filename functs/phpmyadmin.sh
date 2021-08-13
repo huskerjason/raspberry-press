@@ -33,14 +33,14 @@ function phpmyadmin {
 	mv phpMyAdmin-* phpMyAdmin
 	cp files/config.sample.inc.php phpMyAdmin/config.inc.php
 
-	sed -i "18s|''|'$(pwgen -sB 32 1)'|" phpMyAdmin-5.0.4-english/config.inc.php
-	sed -i "43s|\/\/ \$cfg\['Servers']\[\$i]\['controluser'|\$cfg\['Servers']\[\$i]\['controluser'|" phpMyAdmin-5.0.4-english/config.inc.php
-	sed -i "44s|\/\/ \$cfg\['Servers']\[\$i]\['controlpass'|\$cfg\['Servers']\[\$i]\['controlpass'|" phpMyAdmin-5.0.4-english/config.inc.php
-	sed -i "43s|'[^']*'|'$PMA_CONTROL_USER'|3" phpMyAdmin-5.0.4-english/config.inc.php
-	sed -i "44s|'[^']*'|'$PMA_CONTROL_PASSWORD'|3" phpMyAdmin-5.0.4-english/config.inc.php
+	sed -i "18s|''|'$(pwgen -sB 32 1)'|" phpMyAdmin/config.inc.php
+	sed -i "43s|\/\/ \$cfg\['Servers']\[\$i]\['controluser'|\$cfg\['Servers']\[\$i]\['controluser'|" phpMyAdmin/config.inc.php
+	sed -i "44s|\/\/ \$cfg\['Servers']\[\$i]\['controlpass'|\$cfg\['Servers']\[\$i]\['controlpass'|" phpMyAdmin/config.inc.php
+	sed -i "43s|'[^']*'|'$PMA_CONTROL_USER'|3" phpMyAdmin/config.inc.php
+	sed -i "44s|'[^']*'|'$PMA_CONTROL_PASSWORD'|3" phpMyAdmin/config.inc.php
 
 	sudo rm -rf /usr/share/phpmyadmin
-	sudo mv phpMyAdmin-5.0.4-english /usr/share/phpmyadmin
+	sudo mv phpMyAdmin /usr/share/phpmyadmin
 
 	sudo cp files/phpmyadmin.conf /etc/apache2/conf-available/
 	sudo mkdir -p /var/lib/phpmyadmin/tmp
