@@ -28,7 +28,7 @@ cd $DIR_SOURCE
 . functs/whiptail.sh
 . functs/update.sh
 . functs/lamp.sh
-. functs/phpmyadmin-5.0.4.sh
+. functs/phpmyadmin.sh
 . functs/wordpress.sh
 . functs/wp-permissions.sh
 . functs/display-stuff.sh
