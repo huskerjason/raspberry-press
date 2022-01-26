@@ -147,6 +147,10 @@ function get_wordpress {
 		sudo unzip files/twentytwentyone.zip -d /var/www/html/wp-content/themes/ > /dev/null
 	fi
 
+	if [[ " ${WP_THEMES[@]} " =~ "Twenty Twenty Two" ]]; then
+		sudo unzip files/twentytwentytwo.zip -d /var/www/html/wp-content/themes/ > /dev/null
+	fi
+
 
 
 
