@@ -98,6 +98,5 @@ function get_values {
 
 	fi
 
-
 }
 
