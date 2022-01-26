@@ -16,5 +16,5 @@ The script will tell you what model Pi you are using, it's clock speed, and how 
 Quick overview of the script:
 - first step of any Pi project, it does an update and upgrade.
 - installs Apache web server, MariaDB database, and PHP scripting language. Apache is configured for permalinks.
-- installs phpMyAdmin database manager. The Debian ARM repository is 4.6.6. It sucks so the script does a manual install with 5.0.2.
+- installs phpMyAdmin database manager. The Debian ARM repository is 4.6.6. It sucks so the script does a manual install with 5.1.2.
 - downloads WordPress and gets it ready for a configuration run
