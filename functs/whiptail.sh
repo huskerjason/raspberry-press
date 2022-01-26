@@ -77,7 +77,8 @@ function get_values {
 		#  Pick themes
 		WP_THEMES=$(whiptail --backtitle 'Famous 10 Minute Install' --title 'Check list example' --checklist \
 		"\nChoose themes you would like installed." 18 76 10 \
-		'Twenty Twenty One' '' ON \
+		'Twenty Twenty Two' '' ON \
+		'Twenty Twenty One' '' OFF \
 		'Twenty Twenty' '' OFF \
 		'Twenty Nineteen' '' OFF \
 		'Twenty Seventeen' '' OFF \
