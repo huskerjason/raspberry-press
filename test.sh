@@ -1,19 +1,7 @@
 #!/bin/bash
 
-###############################################################################
-##
-##
-##	Famous 10 Minute Raspberry Pi WordPress Install
-##
-##	Jason Henning
-##
-##
-###############################################################################
-
-
-
-curl -L -O https://github.com/huskerjason/raspberry-press/archive/master.zip
-
-unzip master.zip
-
-bash raspberry-press-master/install.sh
+sudo apt update
+sudo apt install git -y
+git clone https://github.com/huskerjason/raspberry-press.git
+cd raspberry-press
+bash press-installer.sh
