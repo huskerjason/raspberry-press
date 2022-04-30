@@ -3,11 +3,7 @@ WordPress touts their 5 Minute Install. This is my Raspberry Pi version of that.
 #
 You will do an update, install git, clone the repo, then run the script.
 ~~~bash
-sudo apt update
-sudo apt install git -y
-git clone https://github.com/huskerjason/raspberry-press.git
-cd raspberry-press
-bash install.sh
+curl https://raw.githubusercontent.com/huskerjason/raspberry-press/master/install.sh | sh
 ~~~
 The script will pause near the end. You should open your browser and type in the IP address. This is the final step to configure WP. It's only a few questions, very quick. Once it says you can sign in, come back and finish the script.
 #
