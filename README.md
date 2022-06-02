@@ -14,3 +14,6 @@ Quick overview of the script:
 - installs Apache web server, MariaDB database, and PHP scripting language. Apache is configured for permalinks.
 - installs phpMyAdmin database manager. The Debian ARM repository is 4.6.6. It sucks so the script does a manual install with 5.1.2.
 - downloads WordPress and gets it ready for a configuration run
+
+
+https://downloads.wordpress.org/release/wordpress-6.0-no-content.zip
